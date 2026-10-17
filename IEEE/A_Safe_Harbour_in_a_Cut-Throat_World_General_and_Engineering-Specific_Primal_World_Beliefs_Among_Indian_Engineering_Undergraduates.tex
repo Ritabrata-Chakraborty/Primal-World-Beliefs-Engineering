@@ -344,7 +344,7 @@ Indian engineering undergraduates in this sample described the world as consider
 
 
 \section*{Data Availability}
-The de-identified response data ($N$ = 108; state recoded to region, time stamps removed), a codebook and the complete analysis code are provided as supplementary files with this submission. All statistics reported in the article, except the number of states represented and the data-collection dates, can be reproduced from these files. Deviations from standard PI-18 administration, data handling, item-level results, a sensitivity analysis, the codebook, reproduction instructions and the STROBE checklist are given in the Supplementary Material appended to this paper (Sections~\ref{sec:s1}--\ref{sec:s5}).
+The de-identified response data ($N$ = 108; state recoded to region, time stamps removed), a codebook and the complete analysis code are provided as supplementary files with this submission. All statistics reported in the article, except the number of states represented and the data-collection dates, can be reproduced from these files. Deviations from standard PI-18 administration, data handling, item-level results, a sensitivity analysis, the codebook and reproduction instructions are given in the Supplementary Material appended to this paper (Sections~\ref{sec:s1}--\ref{sec:s4}).
 
 \section*{Ethical Considerations}
 The survey was anonymous and collected no names, contact details, student identifiers or institutional affiliations; only sex, age and state were recorded as demographic information. In the shared dataset, state is recoded to region and time stamps are removed.
@@ -486,7 +486,7 @@ A.~A. Igolkina and G.~Meshcheryakov, ``semopy: A Python package for structural e
 \end{center}
 \vspace{6pt}
 
-\noindent This supplementary material accompanies the article above. It reports item-level results, a sensitivity analysis, deviations from standard PI-18 administration a codebook for the shared data file, instructions for reproducing the analyses and the STROBE reporting checklist (Table~\ref{tab:s4}).
+\noindent This supplementary material accompanies the article above. It reports item-level results, a sensitivity analysis, deviations from standard PI-18 administration, a codebook for the shared data file and instructions for reproducing the analyses.
 
 \section{Deviations From Standard PI-18 Administration}\label{sec:s1}
 
@@ -617,53 +617,5 @@ EPB-18 first-eigenvalue variance share &  & 48.4\% / 39.5\% \\
 \section{Reproducing the Analyses}\label{sec:s4}
 
 Running \texttt{python analysis.py pwb\_engineering\_deidentified.csv output\_folder} (Python 3.13; pandas, NumPy, SciPy, statsmodels, factor\_analyzer 0.5.1, semopy 2.3.11) writes all statistics to \texttt{results.json}. Bootstrap procedures use a fixed random seed (20241013), so the reported values are reproduced exactly. When \texttt{results.json} is written to the default \texttt{out/} folder beside the scripts, running \texttt{tables.py} and \texttt{figures.py} regenerates the tables and figures. Results obtained from the shared file are identical to those obtained from the original export, apart from the number of states and the time stamps, which were removed.
-
-\section{STROBE Checklist}\label{sec:s5}
-Table~\ref{tab:s4} lists the STROBE items for cross-sectional studies~\cite{vonelm2007} and where each is addressed in this paper.
-
-\begin{table}[!htbp]
-\centering
-\renewcommand{\arraystretch}{1.12}
-\footnotesize
-\setlength{\tabcolsep}{4pt}
-\caption{STROBE Statement: Checklist of Items for Cross-Sectional Studies, With Location in This Paper}
-\label{tab:s4}
-\begin{tabular}{>{\raggedright\arraybackslash}p{3.3cm}c>{\raggedright\arraybackslash}p{6.2cm}>{\raggedright\arraybackslash}p{6.6cm}}
-\toprule
-Section/topic & Item & Recommendation (abridged) & Location in this paper \\
-\midrule
-Title and abstract & 1 & (a) Indicate the study design in the title or abstract; (b) provide an informative, balanced abstract & Abstract (cross-sectional convenience sample; principal results and limitations) \\
-\multicolumn{4}{l}{\emph{Introduction}} \\
-\hspace{0.8em}Background/rationale & 2 & Explain the scientific background and rationale & Introduction; Literature Review \\
-\hspace{0.8em}Objectives & 3 & State specific objectives, including prespecified hypotheses & Literature Review: Research Questions (RQ1–RQ4; no preregistered hypotheses) \\
-\multicolumn{4}{l}{\emph{Methods}} \\
-\hspace{0.8em}Study design & 4 & Present key elements of study design early & Method: Design and Participants \\
-\hspace{0.8em}Setting & 5 & Describe setting, locations and dates of recruitment and data collection & Method: Design and Participants (online survey, 13–15 October 2024) \\
-\hspace{0.8em}Participants & 6 & Eligibility criteria, sources and methods of selection & Method: Design and Participants; Limitations (eligibility not verified) \\
-\hspace{0.8em}Variables & 7 & Define outcomes, exposures, predictors and confounders & Method: Measures; Data Quality \\
-\hspace{0.8em}Data sources/measurement & 8 & Give sources of data and details of measurement & Method: Measures; Suppl. Sections~\ref{sec:s1}--\ref{sec:s2}, Table~\ref{tab:s1} \\
-\hspace{0.8em}Bias & 9 & Describe efforts to address potential sources of bias & Method: Data Quality (long-string, same-side responding, acquiescence index); keying-matched comparisons \\
-\hspace{0.8em}Study size & 10 & Explain how the study size was arrived at & Method: Design and Participants (all available responses); Limitations \\
-\hspace{0.8em}Quantitative variables & 11 & Explain how quantitative variables were handled & Method: Measures (0–5 scoring, midpoint 2.5); Suppl. Section~\ref{sec:s2} \\
-\hspace{0.8em}Statistical methods & 12 & (a) Statistical methods; (b) subgroups/interactions; (c) missing data; (d) sampling strategy; (e) sensitivity analyses & Method: Analytic Strategy; no missing data; exploratory demographic tests Holm-adjusted; sensitivity analysis (Suppl. Table~\ref{tab:s3}) \\
-\multicolumn{4}{l}{\emph{Results}} \\
-\hspace{0.8em}Participants & 13 & Report numbers of individuals at each stage & Method: Design and Participants (108 responses, all analysed; 7 unmatched spreadsheet rows not analysed) \\
-\hspace{0.8em}Descriptive data & 14 & Characteristics of participants; missing data & Method: Design and Participants; Table~\ref{tab:t1} \\
-\hspace{0.8em}Outcome data & 15 & Report numbers of outcome events or summary measures & Results; Tables~\ref{tab:t1}, \ref{tab:t3}; Figs.~\ref{fig:f2}--\ref{fig:f3} \\
-\hspace{0.8em}Main results & 16 & Unadjusted and adjusted estimates with precision (e.g., 95\% CI) & Results; Tables~\ref{tab:t1}--\ref{tab:t5} (effect sizes with 95\% CIs) \\
-\hspace{0.8em}Other analyses & 17 & Report other analyses (subgroups, interactions, sensitivity) & Results: Exploratory and Sensitivity Analyses; Suppl. Table~\ref{tab:s3} \\
-\multicolumn{4}{l}{\emph{Discussion}} \\
-\hspace{0.8em}Key results & 18 & Summarise key results with reference to objectives & Discussion (opening paragraph) \\
-\hspace{0.8em}Limitations & 19 & Discuss limitations, including sources of bias and imprecision & Discussion: Limitations \\
-\hspace{0.8em}Interpretation & 20 & Cautious overall interpretation considering objectives, limitations and other evidence & Discussion: A Cut-Throat World; A Safe Harbour; Measurement Implications \\
-\hspace{0.8em}Generalisability & 21 & Discuss external validity & Discussion: Limitations \\
-\multicolumn{4}{l}{\emph{Other information}} \\
-\hspace{0.8em}Funding & 22 & Give the source of funding and role of funders & Not stated in this version; funding declaration to be added by the author \\
-\bottomrule
-\end{tabular}
-
-\vspace{3pt}\parbox{\textwidth}{\scriptsize \emph{Note.} Recommendations are abridged from the STROBE checklist for cross-sectional studies~\cite{vonelm2007}. Locations refer to section headings in this paper.}
-\end{table}
-
 
 \end{document}
