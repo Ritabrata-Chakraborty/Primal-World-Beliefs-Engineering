@@ -344,7 +344,7 @@ Indian engineering undergraduates in this sample described the world as consider
 
 
 \section*{Data Availability}
-The de-identified response data ($N$ = 108; state recoded to region, time stamps removed), a codebook and the complete analysis code are provided as supplementary files with this submission. All statistics reported in the article, except the number of states represented and the data-collection dates, can be reproduced from these files. Deviations from standard PI-18 administration, data handling, item-level results, a sensitivity analysis, the codebook and reproduction instructions are given in the Supplementary Material appended to this paper (Sections~\ref{sec:s1}--\ref{sec:s4}).
+The de-identified response data ($N$ = 108; state recoded to region, time stamps removed), a codebook and the complete analysis code are publicly available at \url{https://github.com/robotics1106/Primal-World-Beliefs-Engineering}. All statistics reported in the article, except the number of states represented and the data-collection dates, can be reproduced from these files. Deviations from standard PI-18 administration, data handling, item-level results, a sensitivity analysis, the codebook and reproduction instructions are given in the Supplementary Material appended to this paper (Sections~\ref{sec:s1}--\ref{sec:s4}).
 
 \section*{Ethical Considerations}
 The survey was anonymous and collected no names, contact details, student identifiers or institutional affiliations; only sex, age and state were recorded as demographic information. In the shared dataset, state is recoded to region and time stamps are removed.
@@ -616,6 +616,6 @@ EPB-18 first-eigenvalue variance share &  & 48.4\% / 39.5\% \\
 
 \section{Reproducing the Analyses}\label{sec:s4}
 
-Running \texttt{python analysis.py pwb\_engineering\_deidentified.csv output\_folder} (Python 3.13; pandas, NumPy, SciPy, statsmodels, factor\_analyzer 0.5.1, semopy 2.3.11) writes all statistics to \texttt{results.json}. Bootstrap procedures use a fixed random seed (20241013), so the reported values are reproduced exactly. When \texttt{results.json} is written to the default \texttt{out/} folder beside the scripts, running \texttt{tables.py} and \texttt{figures.py} regenerates the tables and figures. Results obtained from the shared file are identical to those obtained from the original export, apart from the number of states and the time stamps, which were removed.
+The data file and scripts are available at \url{https://github.com/robotics1106/Primal-World-Beliefs-Engineering}. Running \texttt{python analysis.py pwb\_engineering\_deidentified.csv output\_folder} (Python 3.13; pandas, NumPy, SciPy, statsmodels, factor\_analyzer 0.5.1, semopy 2.3.11) writes all statistics to \texttt{results.json}. Bootstrap procedures use a fixed random seed (20241013), so the reported values are reproduced exactly. When \texttt{results.json} is written to the default \texttt{out/} folder beside the scripts, running \texttt{tables.py} and \texttt{figures.py} regenerates the tables and figures. Results obtained from the shared file are identical to those obtained from the original export, apart from the number of states and the time stamps, which were removed.
 
 \end{document}
