@@ -6,9 +6,6 @@ authors:
   - family-names: Chakraborty
     given-names: Ritabrata
     affiliation: "University of Pennsylvania"
-  - family-names: Choubisa
-    given-names: Rajneesh
-    affiliation: "Birla Institute of Technology and Science, Pilani"
 date-released: 2026-10-17
 url: "https://robotics1106.github.io/Primal-World-Beliefs-Engineering/"
 repository-code: "https://github.com/robotics1106/Primal-World-Beliefs-Engineering"
@@ -26,8 +23,6 @@ preferred-citation:
   authors:
     - family-names: Chakraborty
       given-names: Ritabrata
-    - family-names: Choubisa
-      given-names: Rajneesh
   year: 2026
   status: preprint
   publisher:
