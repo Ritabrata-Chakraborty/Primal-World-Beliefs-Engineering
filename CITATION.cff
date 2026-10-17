@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this data or code, please cite the paper below."
+title: "A Safe Harbour in a Cut-Throat World? General and Engineering-Specific Primal World Beliefs Among Indian Engineering Undergraduates"
+type: dataset
+authors:
+  - family-names: Chakraborty
+    given-names: Ritabrata
+    affiliation: "University of Pennsylvania"
+  - family-names: Choubisa
+    given-names: Rajneesh
+    affiliation: "Birla Institute of Technology and Science, Pilani"
+date-released: 2026-10-17
+url: "https://robotics1106.github.io/primal-world-beliefs-engineering/"
+repository-code: "https://github.com/robotics1106/primal-world-beliefs-engineering"
+license: CC-BY-4.0
+keywords:
+  - primal world beliefs
+  - PI-18
+  - engineering education
+  - acquiescent responding
+  - India
+preferred-citation:
+  type: article
+  title: "A Safe Harbour in a Cut-Throat World? General and Engineering-Specific Primal World Beliefs Among Indian Engineering Undergraduates"
+  authors:
+    - family-names: Chakraborty
+      given-names: Ritabrata
+    - family-names: Choubisa
+      given-names: Rajneesh
+  year: 2026
+  status: preprint
+  url: "https://robotics1106.github.io/primal-world-beliefs-engineering/"

@@ -1,0 +1,16 @@
+{
+  "title": "A Safe Harbour in a Cut-Throat World? General and Engineering-Specific Primal World Beliefs Among Indian Engineering Undergraduates (preprint, data and code)",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {"name": "Chakraborty, Ritabrata", "affiliation": "University of Pennsylvania"},
+    {"name": "Choubisa, Rajneesh", "affiliation": "Birla Institute of Technology and Science, Pilani"}
+  ],
+  "description": "Primal world beliefs (primals) predict well-being but have rarely been studied in non-Western students or alongside beliefs about a specific domain. 108 Indian engineering undergraduates completed the PI-18 and 18 new engineering-specific items (EPB-18). Students saw the world as markedly less Safe than reference samples (d = -1.06) yet rated engineering as substantially safer than the world (d_z = 0.72), a premium specific to Safe. Includes the paper, de-identified data and full analysis code.",
+  "keywords": ["primal world beliefs", "PI-18", "worldview", "career security", "acquiescent responding", "reverse-keyed items", "STEM higher education", "India"],
+  "license": "cc-by-4.0",
+  "language": "eng",
+  "related_identifiers": [
+    {"identifier": "https://robotics1106.github.io/primal-world-beliefs-engineering/", "relation": "isDocumentedBy", "resource_type": "publication-preprint"}
+  ]
+}

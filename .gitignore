@@ -1,0 +1,15 @@
+# Raw survey export (timestamps + state) and internal/submission-only files: never publish
+Original/
+*.docx
+CLAUDE.md
+CLAUDE-*.md
+graphify-out/
+
+# Build / run outputs
+Data_code_and_figures/out/
+Data_code_and_figures/fig/
+*.aux
+*.log
+*.out
+*.synctex.gz
+__pycache__/
