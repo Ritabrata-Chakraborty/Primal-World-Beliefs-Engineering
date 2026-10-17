@@ -102,9 +102,10 @@ h1 span { display: block; font-weight: 400; font-size: .56em; line-height: 1.35;
 section { padding: 44px 0; border-bottom: 1px solid var(--rule); }
 h2 { font: 600 12px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 20px; }
 p { margin: 0 0 1em; }
+section > p, ol.findings li { text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; }
 .abstract { text-wrap: pretty; }
 sub, sup { line-height: 0; }
-.keywords { font: 14px/1.6 var(--sans); color: var(--muted); margin: 0; }
+.keywords { font: 14px/1.6 var(--sans); color: var(--muted); margin: 0; text-align: left; hyphens: manual; }
 .keywords b { color: var(--fg); font-weight: 600; }
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 0; }
 .stat { background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 18px; }
@@ -113,7 +114,8 @@ sub, sup { line-height: 0; }
 figure { margin: 28px 0; }
 figure a { display: block; }
 figure img { width: 100%; height: auto; display: block; border-radius: 8px; background: #fff; border: 1px solid var(--rule); }
-figcaption { text-wrap: pretty; font: 14px/1.6 var(--sans); color: var(--muted); margin-top: 10px; }
+figcaption { text-wrap: balance; font: 14px/1.6 var(--sans); color: var(--muted); margin: 12px auto 0; max-width: 46em; text-align: center; }
+figcaption b { color: var(--fg); }
 ol.findings { padding-left: 1.4em; margin: 0; }
 ol.findings li::marker { color: var(--accent); font-weight: 600; }
 ol.findings li { margin-bottom: .8em; padding-left: .2em; }
@@ -187,16 +189,6 @@ footer { padding: 32px 0 56px; font: 13px/1.7 var(--sans); color: var(--muted); 
     <div class="stat"><b><i>d</i><sub>z</sub> = 0.72</b><small>Engineering rated safer than the world, within person</small></div>
     <div class="stat"><b>12–22%</b><small>Variance in engineering beliefs explained by general primals</small></div>
   </div>
-
-  <figure>
-    <a href="assets/fig2_domain_vs_general.png"><img src="assets/fig2_domain_vs_general.png" alt="Two-panel figure: engineering-specific versus general Safe, Enticing and Alive means, and a scatter plot of each student's engineering versus general Safe score." loading="lazy" width="1800" height="966"></a>
-    <figcaption><b>Engineering vs. general beliefs.</b> (A) Means with 95% CIs; hollow markers use only positively keyed PI-18 items (keying-matched comparison). (B) Each point is one student; dashed lines mark the scale midpoint; the solid line is the least-squares fit.</figcaption>
-  </figure>
-
-  <figure>
-    <a href="assets/fig1_items_vs_reference.png"><img src="assets/fig1_items_vs_reference.png" alt="Dot plot of each PI-18 item mean in this sample compared with the published reference mean." loading="lazy" width="1800" height="1785"></a>
-    <figcaption><b>General primal items vs. reference values.</b> Circles: present sample (means, 95% CIs, <i>N</i> = 108). Diamonds: published reference means (Clifton &amp; Yaden, 2021, Study 2, <i>N</i> = 5,171). (R) marks reverse-keyed items, shown after rescoring.</figcaption>
-  </figure>
 </section>
 
 <section id="findings">
@@ -207,9 +199,28 @@ footer { padding: 32px 0 56px; font: 13px/1.7 var(--sans); color: var(--muted); 
     <li><b>Loose coupling.</b> General primals explained only 12%–22% of the variance in engineering-specific beliefs, which favours differentiation over a simple top-down “lens” account.</li>
     <li><b>Keying matters.</b> Reverse-keyed PI-18 items formed a method factor. The all-positive engineering items were dominated by a general factor and partly inflated by acquiescence, except the Safe subscale.</li>
   </ol>
+</section>
+
+<section id="figures">
+  <h2>Figures</h2>
+  <figure>
+    <a href="assets/fig3_item_correlations.png"><img src="assets/fig3_item_correlations.png" alt="Heat map of item intercorrelations for the 18 PI-18 items and 18 engineering-specific items." loading="lazy" width="1800" height="1577"></a>
+    <figcaption><b>Figure 1:</b> Item Intercorrelations for the General (PI-18) and Engineering-Specific (EPB-18) Items (<i>N</i> = 108). Thin Outlines Mark Intended Subscales; Thick Lines Separate the Instruments</figcaption>
+  </figure>
+
+  <figure>
+    <a href="assets/fig1_items_vs_reference.png"><img src="assets/fig1_items_vs_reference.png" alt="Dot plot of each PI-18 item mean in this sample compared with the published reference mean." loading="lazy" width="1800" height="1785"></a>
+    <figcaption><b>Figure 2:</b> General Primal Items in the Present Sample (Circles; Means with 95% CIs, <i>N</i> = 108) Compared with Published Reference Means (Diamonds; Clifton &amp; Yaden, 2021, Study 2, <i>N</i> = 5,171). (R) Marks Reverse-Keyed Items, Shown After Rescoring</figcaption>
+  </figure>
+
+  <figure>
+    <a href="assets/fig2_domain_vs_general.png"><img src="assets/fig2_domain_vs_general.png" alt="Two-panel figure: engineering-specific versus general Safe, Enticing and Alive means, and a scatter plot of each student's engineering versus general Safe score." loading="lazy" width="1800" height="966"></a>
+    <figcaption><b>Figure 3:</b> Engineering-Specific Versus General Beliefs. (A) Means with 95% CIs; Hollow Markers Use Only Positively Keyed PI-18 Items. (B) Each Point Is One Student; Dashed Lines Mark the Scale Midpoint; the Solid Line Is the Least-Squares Fit</figcaption>
+  </figure>
+
   <figure>
     <a href="assets/fig4_acquiescence.png"><img src="assets/fig4_acquiescence.png" alt="Forest plot of correlations between the acquiescence index and each general and engineering-specific scale." loading="lazy" width="1800" height="953"></a>
-    <figcaption><b>Acquiescence.</b> Correlations (95% CIs) of the content-balanced acquiescence index with general and engineering-specific scales.</figcaption>
+    <figcaption><b>Figure 4:</b> Correlations (95% CIs) of the Content-Balanced Acquiescence Index with General and Engineering-Specific Scales</figcaption>
   </figure>
 </section>
 

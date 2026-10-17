@@ -6,9 +6,8 @@ Ritabrata Chakraborty (University of Pennsylvania) · Rajneesh Choubisa (BITS Pi
 
 [![Project page](https://img.shields.io/badge/Project-Page-8A3B12?logo=googlechrome&logoColor=white)](https://robotics1106.github.io/Primal-World-Beliefs-Engineering/) [![Paper](https://img.shields.io/badge/Paper-PDF-B31B1B?logo=googlescholar&logoColor=white)](docs/paper.pdf) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23432899.svg)](https://doi.org/10.5281/zenodo.23432899) [![Data](https://img.shields.io/badge/Data-CSV-2E7D32?logo=databricks&logoColor=white)](Data_code_and_figures/data) [![Code](https://img.shields.io/badge/Code-Python-3776AB?logo=python&logoColor=white)](Data_code_and_figures/scripts)
 
-![Engineering-specific versus general primal beliefs](docs/assets/fig2_domain_vs_general.png)
-
-*Engineering-specific vs. general primal beliefs. (A) Means with 95% CIs. (B) Each point is one student's general vs. engineering Safe score.*
+<p align="center"><img src="docs/assets/fig2_domain_vs_general.png" alt="Engineering-specific versus general primal beliefs"></p>
+<p align="center"><b>Figure 3:</b> Engineering-Specific Versus General Beliefs. (A) Means with 95% CIs. (B) Each Point Is One Student's General Versus Engineering Safe Score</p>
 
 ## Summary
 
