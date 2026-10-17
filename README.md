@@ -4,6 +4,8 @@
 
 Ritabrata Chakraborty (University of Pennsylvania) · Rajneesh Choubisa (BITS Pilani)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23432899.svg)](https://doi.org/10.5281/zenodo.23432899)
+
 [**Project page**](https://robotics1106.github.io/primal-world-beliefs-engineering/) · [**Paper (PDF)**](docs/paper.pdf) · [Data](Data_code_and_figures/data) · [Code](Data_code_and_figures/scripts)
 
 ![Engineering-specific versus general primal beliefs](docs/assets/fig2_domain_vs_general.png)
@@ -49,11 +51,13 @@ The fixed bootstrap seed (`20241013`) reproduces every reported value except the
             Primal World Beliefs Among Indian Engineering Undergraduates},
   author = {Chakraborty, Ritabrata and Choubisa, Rajneesh},
   year   = {2026},
+  publisher = {Zenodo},
   note   = {Preprint},
-  url    = {https://robotics1106.github.io/primal-world-beliefs-engineering/}
+  doi    = {10.5281/zenodo.23432899},
+  url    = {https://doi.org/10.5281/zenodo.23432899}
 }
 ```
 
 ## License
 
-The paper, data and figures are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The analysis code is licensed under the [MIT License](LICENSE).
+The paper, data and figures are licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/). The analysis code is licensed under the [MIT License](LICENSE).

@@ -12,7 +12,8 @@ authors:
 date-released: 2026-10-17
 url: "https://robotics1106.github.io/primal-world-beliefs-engineering/"
 repository-code: "https://github.com/robotics1106/primal-world-beliefs-engineering"
-license: CC-BY-4.0
+license: CC-BY-NC-ND-4.0
+doi: 10.5281/zenodo.23432899
 keywords:
   - primal world beliefs
   - PI-18
@@ -29,4 +30,7 @@ preferred-citation:
       given-names: Rajneesh
   year: 2026
   status: preprint
+  publisher:
+    name: Zenodo
+  doi: 10.5281/zenodo.23432899
   url: "https://robotics1106.github.io/primal-world-beliefs-engineering/"
