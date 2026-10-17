@@ -59,8 +59,15 @@
 }
 </script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
+
 <style>
 :root {
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "Inter", -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
   --bg: #fbfaf7; --fg: #1d1d1f; --muted: #5d5d63; --rule: #e3e0d8;
   --card: #ffffff; --accent: #8a3b12; --accent-soft: #f4e9e1; --code: #f2efe8;
 }
@@ -78,52 +85,73 @@
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0; background: var(--bg); color: var(--fg);
-  font: 17px/1.65 "Charter", "Bitstream Charter", "Source Serif Pro", Georgia, serif;
+  font: 18px/1.7 var(--serif);
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
 }
 .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
 header { padding: 64px 0 32px; text-align: center; border-bottom: 1px solid var(--rule); }
-.kicker { font: 600 12px/1 system-ui, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
-h1 { font-size: clamp(26px, 4.6vw, 40px); line-height: 1.18; margin: 16px 0 20px; font-weight: 700; letter-spacing: -.01em; }
-h1 span { display: block; font-weight: 400; font-size: .62em; margin-top: 10px; color: var(--muted); }
-.authors { font-size: 18px; margin: 0 0 6px; }
-.authors a { color: var(--fg); text-decoration-color: var(--rule); }
-.affil { font: 14px/1.5 system-ui, sans-serif; color: var(--muted); margin: 0; }
+.kicker { font: 600 12px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+h1 { font-size: clamp(28px, 4.8vw, 42px); line-height: 1.15; margin: 18px 0 22px; font-weight: 700; letter-spacing: -.015em; text-wrap: balance; }
+h1 span { display: block; font-weight: 400; font-size: .56em; line-height: 1.35; letter-spacing: 0; margin: 12px auto 0; max-width: 34em; color: var(--muted); text-wrap: balance; }
+.authors { font-size: 19px; margin: 0 0 8px; }
+.authors .name { white-space: nowrap; }
+.authors a { color: var(--fg); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+.authors a:hover { text-decoration-color: var(--accent); }
+.affil { font: 14px/1.55 var(--sans); color: var(--muted); margin: 0; }
 .buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 28px; }
 .btn {
-  font: 600 14px/1 system-ui, sans-serif; color: var(--bg); background: var(--fg);
-  padding: 11px 18px; border-radius: 999px; text-decoration: none;
+  display: inline-flex; align-items: center; font: 600 14px/1 var(--sans); color: var(--bg); background: var(--fg);
+  padding: 11px 20px; border: 1px solid var(--fg); border-radius: 999px; text-decoration: none; transition: opacity .15s;
 }
-.btn.ghost { background: transparent; color: var(--fg); border: 1px solid var(--rule); }
+.btn.ghost { background: transparent; color: var(--fg); border-color: var(--rule); }
+.btn.ghost:hover { border-color: var(--muted); opacity: 1; }
 .btn:hover { opacity: .85; }
-section { padding: 40px 0; border-bottom: 1px solid var(--rule); }
-h2 { font: 700 13px/1 system-ui, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 20px; }
+section { padding: 44px 0; border-bottom: 1px solid var(--rule); }
+h2 { font: 600 12px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 20px; }
 p { margin: 0 0 1em; }
-.abstract { text-align: justify; hyphens: auto; }
-.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin: 8px 0 0; }
+.abstract { text-wrap: pretty; }
+sub, sup { line-height: 0; }
+.keywords { font: 14px/1.6 var(--sans); color: var(--muted); margin: 0; }
+.keywords b { color: var(--fg); font-weight: 600; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 0; }
 .stat { background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 18px; }
-.stat b { display: block; font: 700 28px/1.1 system-ui, sans-serif; color: var(--accent); }
-.stat small { display: block; font: 14px/1.45 system-ui, sans-serif; color: var(--muted); margin-top: 6px; }
+.stat b { display: block; font: 700 27px/1.15 var(--serif); color: var(--accent); white-space: nowrap; }
+.stat small { display: block; font: 13.5px/1.45 var(--sans); color: var(--muted); margin-top: 6px; }
 figure { margin: 28px 0; }
+figure a { display: block; }
 figure img { width: 100%; height: auto; display: block; border-radius: 8px; background: #fff; border: 1px solid var(--rule); }
-figcaption { font: 14px/1.55 system-ui, sans-serif; color: var(--muted); margin-top: 10px; }
-ol.findings { padding-left: 1.2em; }
-ol.findings li { margin-bottom: .7em; }
+figcaption { text-wrap: pretty; font: 14px/1.6 var(--sans); color: var(--muted); margin-top: 10px; }
+ol.findings { padding-left: 1.4em; margin: 0; }
+ol.findings li::marker { color: var(--accent); font-weight: 600; }
+ol.findings li { margin-bottom: .8em; padding-left: .2em; }
 pre {
   background: var(--code); border: 1px solid var(--rule); border-radius: 8px;
-  padding: 16px; overflow-x: auto; font: 13px/1.5 ui-monospace, "SFMono-Regular", Menlo, monospace; margin: 0;
+  padding: 16px 18px; overflow-x: auto; font: 13px/1.6 var(--mono); margin: 0; white-space: pre;
 }
-.copy { float: right; font: 600 12px/1 system-ui, sans-serif; background: var(--accent-soft); color: var(--accent); border: 0; border-radius: 6px; padding: 7px 10px; cursor: pointer; }
-.resources { display: grid; grid-template-columns: 140px 1fr; gap: 24px; align-items: start; }
-.resources img { width: 100%; border: 1px solid var(--rule); border-radius: 4px; background: #fff; }
+.head-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.head-row h2 { margin: 0; }
+.copy { font: 600 12px/1 var(--sans); background: var(--accent-soft); color: var(--accent); border: 0; border-radius: 6px; padding: 7px 10px; cursor: pointer; }
+.resources { display: grid; grid-template-columns: 132px 1fr; gap: 28px; align-items: start; }
+.resources a.thumb { display: block; }
+.resources img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
 .resources ul { margin: 0; padding-left: 1.1em; }
+.resources li { margin-bottom: .5em; }
 code { background: var(--code); padding: 1px 5px; border-radius: 4px; font-size: .88em; }
-a { color: var(--accent); }
-footer { padding: 32px 0 56px; font: 13px/1.6 system-ui, sans-serif; color: var(--muted); text-align: center; }
+a { color: var(--accent); text-underline-offset: 2px; }
+footer { padding: 32px 0 56px; font: 13px/1.7 var(--sans); color: var(--muted); text-align: center; }
+@media (max-width: 760px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 560px) {
-  header { padding-top: 40px; }
-  .resources { grid-template-columns: 1fr; }
-  .resources img { max-width: 160px; }
-  .abstract { text-align: left; }
+  body { font-size: 17px; }
+  header { padding: 40px 0 28px; }
+  section { padding: 36px 0; }
+  .stats { gap: 10px; }
+  .stat { padding: 14px; }
+  .stat b { font-size: 23px; }
+  .resources { grid-template-columns: 96px 1fr; gap: 18px; }
+  .buttons { gap: 8px; }
+  .btn { padding: 9px 14px; font-size: 13px; }
 }
 </style>
 </head>
@@ -135,11 +163,11 @@ footer { padding: 32px 0 56px; font: 13px/1.6 system-ui, sans-serif; color: var(
     <h1>A Safe Harbour in a Cut-Throat World?
       <span>General and Engineering-Specific Primal World Beliefs Among Indian Engineering Undergraduates</span></h1>
     <p class="authors">
-      <a href="https://scholar.google.com/citations?user=JikCewwAAAAJ&amp;hl=en">Ritabrata Chakraborty</a><sup>1</sup>
-      &nbsp;and&nbsp; Rajneesh Choubisa<sup>2</sup>
+      <span class="name"><a href="https://scholar.google.com/citations?user=JikCewwAAAAJ&amp;hl=en">Ritabrata Chakraborty</a><sup>1</sup></span>
+      &nbsp;and&nbsp; <span class="name">Rajneesh Choubisa<sup>2</sup></span>
     </p>
     <p class="affil"><sup>1</sup>School of Engineering and Applied Science, University of Pennsylvania</p>
-    <p class="affil"><sup>2</sup>Department of Humanities and Social Sciences, BITS Pilani, Pilani Campus</p>
+    <p class="affil"><sup>2</sup>Department of Humanities and Social Sciences, BITS&nbsp;Pilani, Pilani&nbsp;Campus</p>
     <div class="buttons">
       <a class="btn" href="paper.pdf">Paper (PDF)</a>
       <a class="btn ghost" href="https://github.com/robotics1106/primal-world-beliefs-engineering">Code &amp; Data</a>
@@ -154,25 +182,25 @@ footer { padding: 32px 0 56px; font: 13px/1.6 system-ui, sans-serif; color: var(
 <section id="abstract">
   <h2>Abstract</h2>
   <p class="abstract">Primal world beliefs (primals), people's most basic beliefs about whether the world is Safe, Enticing and Alive, predict well-being but have rarely been studied in non-Western students or alongside beliefs about a specific domain. A convenience sample of 108 Indian engineering undergraduates (aged 17–25) completed the 18-item Primals Inventory (PI-18) and 18 new, positively keyed engineering-specific items. Relative to published reference values, students saw the world as markedly less Safe (<i>d</i> = −1.06), with the largest deviations on items describing the world as cut-throat and competitive (86.1% agreed) and as bad. Yet they rated engineering as substantially safer than the world (<i>d</i><sub>z</sub> = 0.72, 95% CI [0.51, 1.00]); this elevation persisted when only positively keyed general items were compared (<i>d</i><sub>z</sub> = 0.50) and was specific to Safe, with negligible differences for Enticing and Alive. General primals explained only 12%–22% of the variance in engineering-specific beliefs. Measurement analyses showed that reverse-keyed PI-18 items formed a method factor, and that the all-positive engineering items were dominated by one general factor and partly contaminated by acquiescence, except for the Safe subscale. Students may treat engineering as a protected pathway within a threatening world, consistent with compensatory-control and effort-justification accounts that require longitudinal testing. Domain-specific primal measures need balanced keying, and PI-18 studies in India should model keying effects.</p>
-  <p class="affil"><b>Keywords:</b> PI-18, worldview, career security, acquiescent responding, reverse-keyed items, STEM higher education</p>
+  <p class="keywords"><b>Keywords:</b> PI-18, worldview, career security, acquiescent responding, reverse-keyed items, STEM higher education</p>
 </section>
 
 <section id="results">
   <h2>Key results</h2>
   <div class="stats">
-    <div class="stat"><b>d = −1.06</b><small>General Safe vs. published reference values (PI-18)</small></div>
-    <div class="stat"><b>86.1%</b><small>agreed the world is “cut-throat and competitive”</small></div>
-    <div class="stat"><b>d<sub>z</sub> = 0.72</b><small>Engineering rated safer than the world, within person</small></div>
+    <div class="stat"><b><i>d</i> = −1.06</b><small>General Safe vs. published reference values (PI-18)</small></div>
+    <div class="stat"><b>86.1%</b><small>agreed the world is “cut‑throat and competitive”</small></div>
+    <div class="stat"><b><i>d</i><sub>z</sub> = 0.72</b><small>Engineering rated safer than the world, within person</small></div>
     <div class="stat"><b>12–22%</b><small>Variance in engineering beliefs explained by general primals</small></div>
   </div>
 
   <figure>
-    <img src="assets/fig2_domain_vs_general.png" alt="Two-panel figure: engineering-specific versus general Safe, Enticing and Alive means, and a scatter plot of each student's engineering versus general Safe score." loading="lazy" width="1800" height="966">
+    <a href="assets/fig2_domain_vs_general.png"><img src="assets/fig2_domain_vs_general.png" alt="Two-panel figure: engineering-specific versus general Safe, Enticing and Alive means, and a scatter plot of each student's engineering versus general Safe score." loading="lazy" width="1800" height="966"></a>
     <figcaption><b>Engineering vs. general beliefs.</b> (A) Means with 95% CIs; hollow markers use only positively keyed PI-18 items (keying-matched comparison). (B) Each point is one student; dashed lines mark the scale midpoint; the solid line is the least-squares fit.</figcaption>
   </figure>
 
   <figure>
-    <img src="assets/fig1_items_vs_reference.png" alt="Dot plot of each PI-18 item mean in this sample compared with the published reference mean." loading="lazy" width="1800" height="1785">
+    <a href="assets/fig1_items_vs_reference.png"><img src="assets/fig1_items_vs_reference.png" alt="Dot plot of each PI-18 item mean in this sample compared with the published reference mean." loading="lazy" width="1800" height="1785"></a>
     <figcaption><b>General primal items vs. reference values.</b> Circles: present sample (means, 95% CIs, <i>N</i> = 108). Diamonds: published reference means (Clifton &amp; Yaden, 2021, Study 2, <i>N</i> = 5,171). (R) marks reverse-keyed items, shown after rescoring.</figcaption>
   </figure>
 </section>
@@ -186,7 +214,7 @@ footer { padding: 32px 0 56px; font: 13px/1.6 system-ui, sans-serif; color: var(
     <li><b>Keying matters.</b> Reverse-keyed PI-18 items formed a method factor. The all-positive engineering items were dominated by a general factor and partly inflated by acquiescence, except the Safe subscale.</li>
   </ol>
   <figure>
-    <img src="assets/fig4_acquiescence.png" alt="Forest plot of correlations between the acquiescence index and each general and engineering-specific scale." loading="lazy" width="1800" height="953">
+    <a href="assets/fig4_acquiescence.png"><img src="assets/fig4_acquiescence.png" alt="Forest plot of correlations between the acquiescence index and each general and engineering-specific scale." loading="lazy" width="1800" height="953"></a>
     <figcaption><b>Acquiescence.</b> Correlations (95% CIs) of the content-balanced acquiescence index with general and engineering-specific scales.</figcaption>
   </figure>
 </section>
@@ -194,7 +222,7 @@ footer { padding: 32px 0 56px; font: 13px/1.6 system-ui, sans-serif; color: var(
 <section id="resources">
   <h2>Paper, data &amp; code</h2>
   <div class="resources">
-    <a href="paper.pdf"><img src="assets/paper-thumb.png" alt="First page of the paper" width="497" height="702"></a>
+    <a class="thumb" href="paper.pdf"><img src="assets/paper-thumb.png" alt="First page of the paper" width="400" height="565"></a>
     <ul>
       <li><a href="paper.pdf">Full paper (PDF)</a>, including supplementary material: EPB-18 item wording, item-level results, sensitivity analysis, codebook and STROBE checklist.</li>
       <li><a href="https://github.com/robotics1106/primal-world-beliefs-engineering/tree/main/Data_code_and_figures/data">De-identified data</a> (<i>N</i> = 108; state recoded to region, time stamps removed).</li>
@@ -205,17 +233,19 @@ footer { padding: 32px 0 56px; font: 13px/1.6 system-ui, sans-serif; color: var(
 </section>
 
 <section id="citation">
-  <h2>Citation</h2>
-  <button class="copy" type="button" onclick="navigator.clipboard.writeText(document.getElementById('bib').innerText).then(()=>{this.textContent='Copied'})">Copy</button>
+  <div class="head-row">
+    <h2>Citation</h2>
+    <button class="copy" type="button" onclick="navigator.clipboard.writeText(document.getElementById('bib').innerText).then(()=>{this.textContent='Copied';setTimeout(()=>this.textContent='Copy',1500)})">Copy BibTeX</button>
+  </div>
 <pre id="bib">@misc{chakraborty2026safeharbour,
-  title  = {A Safe Harbour in a Cut-Throat World? General and Engineering-Specific
-            Primal World Beliefs Among Indian Engineering Undergraduates},
-  author = {Chakraborty, Ritabrata and Choubisa, Rajneesh},
-  year   = {2026},
+  title     = {A Safe Harbour in a Cut-Throat World? General and Engineering-Specific
+               Primal World Beliefs Among Indian Engineering Undergraduates},
+  author    = {Chakraborty, Ritabrata and Choubisa, Rajneesh},
+  year      = {2026},
   publisher = {Zenodo},
-  note   = {Preprint},
-  doi    = {10.5281/zenodo.23432899},
-  url    = {https://doi.org/10.5281/zenodo.23432899}
+  note      = {Preprint},
+  doi       = {10.5281/zenodo.23432899},
+  url       = {https://doi.org/10.5281/zenodo.23432899}
 }</pre>
 </section>
 

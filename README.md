@@ -10,6 +10,8 @@ Ritabrata Chakraborty (University of Pennsylvania) · Rajneesh Choubisa (BITS Pi
 
 ![Engineering-specific versus general primal beliefs](docs/assets/fig2_domain_vs_general.png)
 
+*Engineering-specific vs. general primal beliefs. (A) Means with 95% CIs. (B) Each point is one student's general vs. engineering Safe score.*
+
 ## Summary
 
 Primal world beliefs (primals) are people's most basic beliefs about whether the world is Safe, Enticing and Alive. We gave 108 Indian engineering undergraduates (aged 17–25) the 18-item Primals Inventory (PI-18) and 18 new engineering-specific items (EPB-18).
@@ -34,11 +36,15 @@ Primal world beliefs (primals) are people's most basic beliefs about whether the
 Requirements: Python 3.11+, with `pandas`, `numpy`, `scipy`, `statsmodels`, `matplotlib`, `factor_analyzer==0.5.1` and `semopy==2.3.11`.
 
 ```bash
-pip install pandas numpy scipy statsmodels matplotlib "scikit-learn<1.6" factor_analyzer==0.5.1 semopy==2.3.11
+pip install pandas numpy scipy statsmodels matplotlib \
+    "scikit-learn<1.6" factor_analyzer==0.5.1 semopy==2.3.11
 cd Data_code_and_figures
-python scripts/analysis.py data/pwb_engineering_deidentified.csv out   # writes out/results.json
-python scripts/tables.py                                              # formats tables from out/
-python scripts/figures.py                                             # regenerates the figures
+
+# All statistics -> out/results.json
+python scripts/analysis.py data/pwb_engineering_deidentified.csv out
+# Tables and figures from out/
+python scripts/tables.py
+python scripts/figures.py
 ```
 
 The fixed bootstrap seed (`20241013`) reproduces every reported value except the number of states represented and the data-collection dates, which need the raw data. `factor_analyzer` 0.5.1 passes a scikit-learn argument that was later renamed (`force_all_finite` → `ensure_all_finite`). Pin `scikit-learn<1.6` as shown, or make that one-word rename.
@@ -47,14 +53,14 @@ The fixed bootstrap seed (`20241013`) reproduces every reported value except the
 
 ```bibtex
 @misc{chakraborty2026safeharbour,
-  title  = {A Safe Harbour in a Cut-Throat World? General and Engineering-Specific
-            Primal World Beliefs Among Indian Engineering Undergraduates},
-  author = {Chakraborty, Ritabrata and Choubisa, Rajneesh},
-  year   = {2026},
+  title     = {A Safe Harbour in a Cut-Throat World? General and Engineering-Specific
+               Primal World Beliefs Among Indian Engineering Undergraduates},
+  author    = {Chakraborty, Ritabrata and Choubisa, Rajneesh},
+  year      = {2026},
   publisher = {Zenodo},
-  note   = {Preprint},
-  doi    = {10.5281/zenodo.23432899},
-  url    = {https://doi.org/10.5281/zenodo.23432899}
+  note      = {Preprint},
+  doi       = {10.5281/zenodo.23432899},
+  url       = {https://doi.org/10.5281/zenodo.23432899}
 }
 ```
 
