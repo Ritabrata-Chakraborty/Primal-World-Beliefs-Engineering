@@ -10,8 +10,8 @@ authors:
     given-names: Rajneesh
     affiliation: "Birla Institute of Technology and Science, Pilani"
 date-released: 2026-10-17
-url: "https://robotics1106.github.io/primal-world-beliefs-engineering/"
-repository-code: "https://github.com/robotics1106/primal-world-beliefs-engineering"
+url: "https://robotics1106.github.io/Primal-World-Beliefs-Engineering/"
+repository-code: "https://github.com/robotics1106/Primal-World-Beliefs-Engineering"
 license: CC-BY-NC-ND-4.0
 doi: 10.5281/zenodo.23432899
 keywords:
@@ -33,4 +33,4 @@ preferred-citation:
   publisher:
     name: Zenodo
   doi: 10.5281/zenodo.23432899
-  url: "https://robotics1106.github.io/primal-world-beliefs-engineering/"
+  url: "https://robotics1106.github.io/Primal-World-Beliefs-Engineering/"
