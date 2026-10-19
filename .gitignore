@@ -13,3 +13,5 @@ Data_code_and_figures/fig/
 *.out
 *.synctex.gz
 __pycache__/
+*.fdb_latexmk
+*.fls
