@@ -7,8 +7,8 @@ authors:
     given-names: Ritabrata
     affiliation: "University of Pennsylvania"
 date-released: 2026-10-17
-url: "https://robotics1106.github.io/Primal-World-Beliefs-Engineering/"
-repository-code: "https://github.com/robotics1106/Primal-World-Beliefs-Engineering"
+url: "https://ritabrata-chakraborty.github.io/Primal-World-Beliefs-Engineering/"
+repository-code: "https://github.com/Ritabrata-Chakraborty/Primal-World-Beliefs-Engineering"
 license: CC-BY-NC-ND-4.0
 keywords:
   - Primal World Beliefs
@@ -24,4 +24,4 @@ preferred-citation:
       given-names: Ritabrata
   year: 2026
   status: preprint
-  url: "https://robotics1106.github.io/Primal-World-Beliefs-Engineering/"
+  url: "https://ritabrata-chakraborty.github.io/Primal-World-Beliefs-Engineering/"
