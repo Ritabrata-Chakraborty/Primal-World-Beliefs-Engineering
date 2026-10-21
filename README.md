@@ -11,6 +11,8 @@ Ritabrata Chakraborty (University of Pennsylvania)
 
 ## Summary
 
+**Try it:** the [project page](https://ritabrata-chakraborty.github.io/Primal-World-Beliefs-Engineering/#questionnaire) has an interactive questionnaire (the general PI-18 and the engineering-specific EPB-18) that scores your answers and compares them with this study's averages. Answers never leave your browser.
+
 Primal world beliefs (primals) are people's most basic beliefs about whether the world is Safe, Enticing and Alive. We gave 108 Indian engineering undergraduates (aged 17–25) the 18-item Primals Inventory (PI-18) and 18 new engineering-specific items (EPB-18).
 
 - **A cut-throat world.** Students saw the world as much less Safe than published reference samples (*d* = −1.06). 86.1% agreed that the world is "cut-throat and competitive".

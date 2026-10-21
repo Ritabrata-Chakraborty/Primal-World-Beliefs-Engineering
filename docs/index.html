@@ -152,6 +152,59 @@ footer { padding: 32px 0 56px; font: 13px/1.7 var(--sans); color: var(--muted); 
   :root:not([data-theme="light"]) .theme-toggle .sun { display: block; }
   :root:not([data-theme="light"]) .theme-toggle .moon { display: none; }
 }
+.seg { display: inline-flex; margin: 6px 0 26px; padding: 4px; gap: 4px; border: 1px solid var(--rule); border-radius: 999px; background: var(--card); }
+.seg button { font: 600 14px/1 var(--sans); padding: 10px 18px; border: 0; border-radius: 999px; background: transparent; color: var(--muted); cursor: pointer; transition: background .15s, color .15s; }
+.seg button[aria-selected="true"] { background: var(--fg); color: var(--bg); }
+.seg button:focus-visible, .qactions button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.qpanel[hidden] { display: none; }
+.qlead { font: 14px/1.6 var(--sans); color: var(--muted); margin: 0 0 18px; text-align: left !important; }
+fieldset.q { margin: 0 0 14px; padding: 16px 18px 18px; border: 1px solid var(--rule); border-radius: 12px; background: var(--card); min-width: 0; }
+fieldset.q legend { float: left; width: 100%; padding: 0; margin: 0 0 12px; font: 500 17px/1.5 var(--serif); }
+fieldset.q legend .n { display: inline-block; min-width: 1.9em; font: 600 13px/1 var(--sans); color: var(--accent); }
+fieldset.q .opts { clear: both; display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
+.opts input { position: absolute; opacity: 0; pointer-events: none; }
+.opts label { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 44px; padding: 8px 6px; font: 500 12.5px/1.25 var(--sans); color: var(--muted); border: 1px solid var(--rule); border-radius: 8px; background: var(--bg); cursor: pointer; transition: border-color .12s, background .12s, color .12s; }
+.opts label:hover { border-color: var(--muted); color: var(--fg); }
+.opts input:checked + label { background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 600; }
+.opts input:focus-visible + label { outline: 2px solid var(--accent); outline-offset: 2px; }
+.qactions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 22px 0 0; }
+.qactions button { font: 600 14px/1 var(--sans); padding: 12px 22px; border-radius: 999px; cursor: pointer; border: 1px solid var(--fg); background: var(--fg); color: var(--bg); }
+.qactions button.ghost { background: transparent; color: var(--fg); border-color: var(--rule); }
+.qactions button:disabled { opacity: .4; cursor: not-allowed; }
+.qprogress { font: 13.5px/1.4 var(--sans); color: var(--muted); }
+.qresults { margin-top: 28px; scroll-margin-top: 20px; }
+.qresults:focus { outline: none; }
+.qresults h3 { margin-top: 0; }
+.rcard { padding: 16px 18px 18px; margin-bottom: 12px; border: 1px solid var(--rule); border-radius: 12px; background: var(--card); }
+.rcard.main { border-color: var(--accent); }
+.rtop { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; }
+.rname { font: 600 16px/1.3 var(--sans); }
+.rdesc { font: 13px/1.5 var(--sans); color: var(--muted); margin: 2px 0 0; text-align: left !important; }
+.rscore { font: 700 26px/1 var(--serif); color: var(--accent); white-space: nowrap; }
+.rscore small { font: 500 13px/1 var(--sans); color: var(--muted); }
+.rtrack { position: relative; height: 12px; margin: 20px 0 22px; border-radius: 999px; background: var(--rule); }
+.rband { position: absolute; top: 0; bottom: 0; border-radius: 999px; background: color-mix(in srgb, var(--muted) 38%, var(--rule)); }
+.ravg { position: absolute; top: -5px; bottom: -5px; width: 2px; margin-left: -1px; background: var(--muted); }
+.rref { position: absolute; top: 50%; width: 10px; height: 10px; margin: -5px 0 0 -5px; background: var(--fg); transform: rotate(45deg); opacity: .8; }
+.ryou { position: absolute; top: 50%; width: 20px; height: 20px; margin: -10px 0 0 -10px; border-radius: 50%; background: var(--accent); border: 3px solid var(--card); box-shadow: 0 0 0 1px var(--accent); }
+.rtick { position: absolute; top: 18px; transform: translateX(-50%); font: 11.5px/1 var(--sans); color: var(--muted); }
+.rcap { font: 14px/1.5 var(--sans); margin: 10px 0 0; text-align: left !important; }
+.rcap b { font-weight: 600; }
+.rcap .dir { color: var(--accent); font-weight: 600; }
+.rlegend { display: flex; flex-wrap: wrap; gap: 6px 18px; font: 12.5px/1.4 var(--sans); color: var(--muted); margin: 4px 0 14px; }
+.rlegend span { display: inline-flex; align-items: center; gap: 6px; }
+.rlegend i { display: inline-block; }
+.rlegend .k-you { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); }
+.rlegend .k-avg { width: 2px; height: 14px; background: var(--muted); }
+.rlegend .k-band { width: 18px; height: 8px; border-radius: 999px; background: color-mix(in srgb, var(--muted) 38%, var(--rule)); }
+.rlegend .k-ref { width: 8px; height: 8px; background: var(--fg); opacity: .8; transform: rotate(45deg); }
+.qnote { font: 13px/1.6 var(--sans); color: var(--muted); margin: 26px 0 0 !important; text-align: left !important; }
+@media (max-width: 640px) {
+  fieldset.q { padding: 14px 12px 14px; }
+  fieldset.q .opts { grid-template-columns: repeat(3, 1fr); }
+  .seg { display: flex; }
+  .seg button { flex: 1; padding: 10px 8px; font-size: 13px; }
+}
 </style>
 <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 </head>
@@ -174,6 +227,7 @@ footer { padding: 32px 0 56px; font: 13px/1.7 var(--sans); color: var(--muted); 
     <div class="buttons">
       <a class="btn" href="paper.pdf">Paper (PDF)</a>
       <a class="btn ghost" href="https://github.com/Ritabrata-Chakraborty/Primal-World-Beliefs-Engineering">Code &amp; Data</a>
+      <a class="btn ghost" href="#questionnaire">Questionnaire</a>
       <a class="btn ghost" href="#citation">Cite</a>
     </div>
   </div>
@@ -205,6 +259,23 @@ footer { padding: 32px 0 56px; font: 13px/1.7 var(--sans); color: var(--muted); 
     <li><b>Loose coupling.</b> General primals explained only 12%–22% of the variance in engineering-specific beliefs, which favours differentiation over a simple top-down “lens” account.</li>
     <li><b>Keying matters.</b> Reverse-keyed PI-18 items formed a method factor. The all-positive engineering items were dominated by a general factor and partly inflated by acquiescence, except the Safe subscale.</li>
   </ol>
+</section>
+
+<section id="questionnaire">
+  <h2>Try the Questionnaire</h2>
+  <p>Answer the 18 statements below, then see how your scores compare with the 108 engineering undergraduates in this study. Switch between the general version (PI-18) and the engineering-specific version (EPB-18); each is scored and compared with its own average. Your answers stay in your browser and are never stored or sent anywhere.</p>
+
+  <div class="seg" role="tablist" aria-label="Choose a questionnaire">
+    <button type="button" role="tab" id="tab-general" aria-controls="panel-general" aria-selected="true">General (PI-18)</button>
+    <button type="button" role="tab" id="tab-engineering" aria-controls="panel-engineering" aria-selected="false" tabindex="-1">Engineering (EPB-18)</button>
+  </div>
+
+  <noscript><p class="note">The questionnaire needs JavaScript. Without it, the items are listed in the paper's supplementary material.</p></noscript>
+
+  <div class="qpanel" id="panel-general" role="tabpanel" aria-labelledby="tab-general"></div>
+  <div class="qpanel" id="panel-engineering" role="tabpanel" aria-labelledby="tab-engineering" hidden></div>
+
+  <p class="qnote">For interest only; this is not a clinical or diagnostic tool. Items are scored 0–5, with seven PI-18 items reverse-scored, exactly as in the paper. The general items are the Primals Inventory (PI-18) by Clifton and Yaden (2021); the engineering items (EPB-18) were written for this study. Averages come from 108 Indian engineering undergraduates surveyed in October 2024, so they describe that group, not people in general. The published reference means for the general version come from a US online adult sample (<i>N</i> = 5,171).</p>
 </section>
 
 <section id="figures">
@@ -267,5 +338,208 @@ footer { padding: 32px 0 56px; font: 13px/1.7 var(--sans); color: var(--muted); 
   </div>
 </footer>
 
+<script>
+(function () {
+  'use strict';
+  var LABELS = ['Strongly disagree', 'Disagree', 'Slightly disagree', 'Slightly agree', 'Agree', 'Strongly agree'];
+  var REVERSED = { P_dull: 1, P_boring: 1, P_worth: 1, P_lackpurpose: 1, P_dangerous: 1, P_cutthroat: 1, P_worse: 1 };
+  var SAFE = ['P_safe', 'P_dangerous', 'P_cutthroat', 'P_worse', 'P_good', 'P_harmless'];
+  var ENT = ['P_beautyugly', 'P_worth', 'P_boring', 'P_abundant', 'P_fascinating', 'P_dull', 'P_beautyaround'];
+  var ALIVE = ['P_helpme', 'P_meant', 'P_lackpurpose', 'P_needsme', 'P_reason'];
+
+  // Averages and SDs of the 108 students (scores on the 0-5 scale), identical to Table 1 of the paper.
+  var SAMPLE = {
+    good: [2.71, 0.74], safe: [2.04, 0.80], enticing: [3.33, 1.00], alive: [2.71, 1.24],
+    e_total: [3.12, 0.95], e_safe: [2.87, 1.10], e_enticing: [3.54, 1.02], e_alive: [2.96, 1.13]
+  };
+  // Published reference means, Clifton & Yaden (2021), Study 2 (N = 5,171); general items only.
+  var REF = { good: 3.35, safe: 2.88, enticing: 3.83, alive: 3.01 };
+
+  var MODES = {
+    general: {
+      lead: 'Statements about the world in general. Choose the option that best matches how you see things.',
+      items: [
+        ['P_safe', 'I tend to see the world as pretty safe.'],
+        ['P_boring', 'Most things in life are kind of boring.'],
+        ['P_meant', 'What happens in the world is meant to happen.'],
+        ['P_fascinating', 'No matter where we are or what the topic might be, the world is fascinating.'],
+        ['P_dangerous', 'On the whole, the world is a dangerous place.'],
+        ['P_helpme', 'It often feels like events are happening in order to help me in some way.'],
+        ['P_beautyaround', 'No matter where we are, incredible beauty is always around us.'],
+        ['P_good', 'Most things in the world are good.'],
+        ['P_lackpurpose', 'Events seem to lack any cosmic or bigger purpose.'],
+        ['P_dull', 'The world is a somewhat dull place where plenty of things are not that interesting.'],
+        ['P_cutthroat', 'Instead of being cooperative, the world is a cut-throat and competitive place.'],
+        ['P_needsme', 'The universe needs me for something important.'],
+        ['P_abundant', 'The world is an abundant place with tons and tons to offer.'],
+        ['P_harmless', 'Most things and situations are harmless and totally safe.'],
+        ['P_reason', 'Everything happens for a reason and on purpose.'],
+        ['P_worth', 'While some things are worth checking out or exploring further, most things probably aren’t worth the effort.'],
+        ['P_worse', 'Most things have a habit of getting worse.'],
+        ['P_beautyugly', 'In life there’s way more beauty than ugliness.']
+      ],
+      scales: [
+        { key: 'good', name: 'Good (overall)', desc: 'Whether the world feels good rather than bad overall.', ids: SAFE.concat(ENT, ['P_helpme', 'P_needsme']), main: true },
+        { key: 'safe', name: 'Safe', desc: 'Whether the world feels safe and cooperative rather than dangerous.', ids: SAFE },
+        { key: 'enticing', name: 'Enticing', desc: 'Whether the world feels interesting and beautiful rather than dull.', ids: ENT },
+        { key: 'alive', name: 'Alive', desc: 'Whether events feel purposeful and responsive rather than meaningless.', ids: ALIVE }
+      ],
+      reference: true, avgName: 'sample average', noun: 'the world'
+    },
+    engineering: {
+      lead: 'Statements about engineering and your engineering education. If you are not an engineering student, answer for engineering as a field.',
+      items: [
+        ['ES1', 'I feel confident that my engineering degree will provide a secure future.'],
+        ['EE1', 'Engineering offers endless opportunities for innovation and creativity.'],
+        ['EA1', 'My engineering studies feel purposeful and meaningful.'],
+        ['ES2', 'The engineering environment feels safe and supportive.'],
+        ['EE2', 'I find the problems we solve in engineering to be exciting and engaging.'],
+        ['EA2', 'The projects I work on seem to follow a greater goal.'],
+        ['ES3', 'Most challenges in my engineering coursework can be solved with effort and perseverance.'],
+        ['EE3', 'There is always something new to explore in the field of engineering.'],
+        ['EA3', 'I believe my role as an engineer is important for solving real-world problems.'],
+        ['ES4', 'I trust that my education is preparing me for a stable career in engineering.'],
+        ['EE4', 'The complexity of engineering makes it fascinating to study and work in.'],
+        ['EA4', 'I often feel like my education is preparing me for a larger purpose.'],
+        ['ES5', 'My engineering program offers a solid foundation for a reliable future.'],
+        ['EE5', 'I feel energized by the possibilities that engineering brings to the world.'],
+        ['EA5', 'The challenges I face in engineering help me grow in meaningful ways.'],
+        ['ES6', 'The academic structure in my engineering program gives me a sense of security.'],
+        ['EE6', 'The engineering projects I work on are full of potential and discovery.'],
+        ['EA6', 'The work I do in engineering feels connected to something bigger than myself.']
+      ],
+      scales: [
+        { key: 'e_total', name: 'Engineering (overall)', desc: 'How positively you see engineering across all 18 statements.', ids: ['ES1','ES2','ES3','ES4','ES5','ES6','EE1','EE2','EE3','EE4','EE5','EE6','EA1','EA2','EA3','EA4','EA5','EA6'], main: true },
+        { key: 'e_safe', name: 'Safe', desc: 'Whether engineering feels secure and supportive.', ids: ['ES1','ES2','ES3','ES4','ES5','ES6'] },
+        { key: 'e_enticing', name: 'Enticing', desc: 'Whether engineering feels interesting and full of possibility.', ids: ['EE1','EE2','EE3','EE4','EE5','EE6'] },
+        { key: 'e_alive', name: 'Alive', desc: 'Whether engineering feels purposeful and meaningful.', ids: ['EA1','EA2','EA3','EA4','EA5','EA6'] }
+      ],
+      reference: false, avgName: 'sample average', noun: 'engineering'
+    }
+  };
+
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+  function fmt(x) { return x.toFixed(2); }
+  function signed(x) { return (x >= 0 ? '+' : '−') + Math.abs(x).toFixed(2); }
+
+  // 0-5 scoring: raw option 0..5; PI-18 reverse-keyed items are scored 5 - x; a scale score is the mean.
+  function scoreScale(answers, ids) {
+    var total = 0;
+    ids.forEach(function (id) { total += REVERSED[id] ? 5 - answers[id] : answers[id]; });
+    return total / ids.length;
+  }
+
+  function describe(z) {
+    var a = Math.abs(z);
+    if (a < 0.25) return { word: 'About average', dir: '' };
+    var strength = a >= 1 ? 'Well' : 'Somewhat';
+    return { word: strength + (z > 0 ? ' above' : ' below') + ' average', dir: z > 0 ? 'above' : 'below' };
+  }
+
+  var state = {};
+  function build(mode) {
+    var cfg = MODES[mode], panel = document.getElementById('panel-' + mode);
+    state[mode] = { answers: {}, shown: false };
+    panel.appendChild(el('p', 'qlead', cfg.lead));
+    cfg.items.forEach(function (it, i) {
+      var fs = el('fieldset', 'q'), lg = el('legend');
+      lg.appendChild(el('span', 'n', (i + 1) + '.'));
+      lg.appendChild(document.createTextNode(it[1]));
+      fs.appendChild(lg);
+      var opts = el('div', 'opts');
+      LABELS.forEach(function (lab, v) {
+        var id = mode + '-' + it[0] + '-' + v;
+        var inp = el('input'); inp.type = 'radio'; inp.name = mode + '-' + it[0]; inp.value = v; inp.id = id;
+        inp.addEventListener('change', function () { state[mode].answers[it[0]] = v; refresh(mode); });
+        var l = el('label', null, lab); l.htmlFor = id;
+        opts.appendChild(inp); opts.appendChild(l);
+      });
+      fs.appendChild(opts); panel.appendChild(fs);
+    });
+    var actions = el('div', 'qactions');
+    var show = el('button', null, 'Show my score'); show.type = 'button'; show.disabled = true; show.id = 'show-' + mode;
+    var reset = el('button', 'ghost', 'Clear answers'); reset.type = 'button';
+    var prog = el('span', 'qprogress'); prog.id = 'prog-' + mode; prog.setAttribute('aria-live', 'polite');
+    actions.appendChild(show); actions.appendChild(reset); actions.appendChild(prog);
+    panel.appendChild(actions);
+    var res = el('div', 'qresults'); res.id = 'res-' + mode; res.tabIndex = -1; res.setAttribute('aria-live', 'polite');
+    panel.appendChild(res);
+    show.addEventListener('click', function () { state[mode].shown = true; render(mode); res.scrollIntoView({ behavior: 'smooth', block: 'start' }); res.focus({ preventScroll: true }); });
+    reset.addEventListener('click', function () {
+      state[mode] = { answers: {}, shown: false };
+      panel.querySelectorAll('input[type=radio]').forEach(function (r) { r.checked = false; });
+      refresh(mode);
+    });
+    refresh(mode);
+  }
+
+  function refresh(mode) {
+    var n = Object.keys(state[mode].answers).length, total = MODES[mode].items.length;
+    document.getElementById('prog-' + mode).textContent = n === total ? 'All ' + total + ' answered' : n + ' of ' + total + ' answered';
+    document.getElementById('show-' + mode).disabled = n < total;
+    if (state[mode].shown && n === total) render(mode); else if (n < total) { state[mode].shown = false; document.getElementById('res-' + mode).textContent = ''; }
+  }
+
+  function render(mode) {
+    var cfg = MODES[mode], a = state[mode].answers, box = document.getElementById('res-' + mode);
+    box.textContent = '';
+    box.appendChild(el('h3', null, 'Your ' + (mode === 'general' ? 'general (PI-18)' : 'engineering (EPB-18)') + ' scores'));
+    var lg = el('div', 'rlegend');
+    [['k-you', 'You'], ['k-avg', 'Average of the 108 students'], ['k-band', 'Typical range (±1 SD)']].concat(cfg.reference ? [['k-ref', 'Published reference mean']] : []).forEach(function (k) {
+      var s = el('span'); s.appendChild(el('i', k[0])); s.appendChild(document.createTextNode(k[1])); lg.appendChild(s);
+    });
+    box.appendChild(lg);
+    cfg.scales.forEach(function (sc) {
+      var you = scoreScale(a, sc.ids), avg = SAMPLE[sc.key][0], sd = SAMPLE[sc.key][1], z = (you - avg) / sd, d = describe(z);
+      var card = el('div', 'rcard' + (sc.main ? ' main' : ''));
+      var top = el('div', 'rtop'), left = el('div');
+      left.appendChild(el('div', 'rname', sc.name)); left.appendChild(el('p', 'rdesc', sc.desc));
+      var sco = el('div', 'rscore', fmt(you)); sco.appendChild(el('small', null, ' / 5'));
+      top.appendChild(left); top.appendChild(sco); card.appendChild(top);
+      var track = el('div', 'rtrack'), lo = Math.max(0, avg - sd), hi = Math.min(5, avg + sd);
+      var band = el('div', 'rband'); band.style.left = (lo / 5 * 100) + '%'; band.style.width = ((hi - lo) / 5 * 100) + '%';
+      var tick = el('div', 'ravg'); tick.style.left = (avg / 5 * 100) + '%';
+      track.appendChild(band); track.appendChild(tick);
+      if (cfg.reference && REF[sc.key] !== undefined) { var rf = el('div', 'rref'); rf.style.left = (REF[sc.key] / 5 * 100) + '%'; track.appendChild(rf); }
+      var yo = el('div', 'ryou'); yo.style.left = (you / 5 * 100) + '%'; track.appendChild(yo);
+      [0, 1, 2, 3, 4, 5].forEach(function (t) { var tk = el('span', 'rtick', String(t)); tk.style.left = (t / 5 * 100) + '%'; track.appendChild(tk); });
+      card.appendChild(track);
+      var cap = el('p', 'rcap');
+      var strong = el('b', d.dir ? 'dir' : null, d.word); cap.appendChild(strong);
+      cap.appendChild(document.createTextNode(': you scored ' + fmt(you) + ' against a sample average of ' + fmt(avg) + ' (' + signed(you - avg) + ', ' + Math.abs(z).toFixed(1) + ' SD' + (Math.abs(z) < 0.05 ? '' : z > 0 ? ' above' : ' below') + ').'));
+      if (cfg.reference && REF[sc.key] !== undefined) {
+        cap.appendChild(document.createTextNode(' The published reference mean is ' + fmt(REF[sc.key]) + ' (' + signed(you - REF[sc.key]) + ' for you).'));
+      }
+      card.appendChild(cap); box.appendChild(card);
+    });
+    box.appendChild(el('p', 'qnote', 'Higher scores mean seeing ' + cfg.noun + ' as safer, more enticing and more alive. A score near the average is typical for the group; a higher or lower score is a difference, not a verdict.'));
+  }
+
+  function select(mode) {
+    Object.keys(MODES).forEach(function (m) {
+      var on = m === mode, tab = document.getElementById('tab-' + m);
+      tab.setAttribute('aria-selected', on ? 'true' : 'false'); tab.tabIndex = on ? 0 : -1;
+      document.getElementById('panel-' + m).hidden = !on;
+    });
+  }
+
+  if (!document.getElementById('panel-general')) return;
+  Object.keys(MODES).forEach(build);
+  var tabs = document.querySelectorAll('.seg [role=tab]');
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { select(t.id.replace('tab-', '')); });
+    t.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      var nxt = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+      nxt.focus(); select(nxt.id.replace('tab-', ''));
+    });
+  });
+})();
+</script>
 </body>
 </html>
