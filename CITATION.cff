@@ -6,7 +6,8 @@ authors:
   - family-names: Chakraborty
     given-names: Ritabrata
     affiliation: "University of Pennsylvania"
-date-released: 2026-10-17
+date-released: 2026-10-22
+doi: 10.31235/osf.io/c7s4b_v1
 url: "https://ritabrata-chakraborty.github.io/Primal-World-Beliefs-Engineering/"
 repository-code: "https://github.com/Ritabrata-Chakraborty/Primal-World-Beliefs-Engineering"
 license: CC-BY-NC-ND-4.0
@@ -23,5 +24,9 @@ preferred-citation:
     - family-names: Chakraborty
       given-names: Ritabrata
   year: 2026
+  month: 10
   status: preprint
-  url: "https://ritabrata-chakraborty.github.io/Primal-World-Beliefs-Engineering/"
+  publisher:
+    name: SocArXiv
+  doi: 10.31235/osf.io/c7s4b_v1
+  url: "https://doi.org/10.31235/osf.io/c7s4b_v1"
